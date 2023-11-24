@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Paws and Claws Adoption Emporium",
-  description: "PLEASE ADOPT THESE ANIMALS",
+  description: "A website for adoption Pets! Please adopt pets!",
 };
 
 export default function RootLayout({

@@ -40,21 +40,21 @@ export default function Page({
 
   return (
     <div className="flex flex-col items-center">
-      <h1 className="text-lg p-8">Check out the pets:</h1>
+      <h1 className="text-lg p-8">Checkout the pets:</h1>
       <br />
-      <div className="flex flex-col items-centre">
+      <div className="flex flex-col items-center text-gray-400">
         <Link href="/pets">Remove the sort</Link>
         <br />
-        <Link href="/pets?sortByAge=asc">Sort by ascending</Link>
+        <Link href="/pets?sortByAge=asc">Sort by ascending age</Link>
         <br />
-        <Link href="/pets?sortByAge=desc">Sort by descending</Link>
+        <Link href="/pets?sortByAge=desc">Sort by descending age</Link>
         <br />
       </div>
       <br />
-      {pets.map((pet, index) => {
+      {sortedPets.map((pet, index) => {
         return (
           <div key={index}>
-            <Link href={`/pets/${pet.name}`}>{pet.name}</Link>
+            <Link href={`/pets/${pet.slug}`}>{pet.name}</Link>
           </div>
         );
       })}
